@@ -137,16 +137,28 @@ public class Netz {
                             routes.remove(r);
                         }
                         break;
-                    }else {
-                        newCluster = new ArrayList<City>();
-                        newCluster.add(r.from);
-                        newCluster.add(r.to);
-                        cityClusters.add(newCluster);
-                        routes.remove(r);
-                        break;
                     }
+                    newCluster = new ArrayList<City>();
+                    newCluster.add(r.from);
+                    newCluster.add(r.to);
+                    cityClusters.add(newCluster);
+                    routes.remove(r);
+                    break;
                 }
                 break;
+            }
+            //Connect leftovers
+            if (cityClusters.size()>1){
+                for (Route r:routes){
+                    for(int i=0; i<cityClusters.size()-1; i++){
+                        for(int j=i; j<cityClusters.size(); j++){
+                            if(r.connects(cityClusters.get(i),cityClusters.get(j)))
+                                routes.add(r);
+                                routes.remove(r);
+                                break;
+                        }
+                    }
+                }
             }
         }
 
@@ -182,6 +194,14 @@ public class Netz {
             this.from = from;
             this.to = to;
             this.distance = distance;
+        }
+
+        public boolean connects(ArrayList<City> cluster1, ArrayList<City> cluster2){
+            if(cluster1.contains(from)&&cluster2.contains(to)
+                return true;
+            if(cluster1.contains(to)&&cluster12.contains(from))
+                return true;
+            return false;
         }
     }
 

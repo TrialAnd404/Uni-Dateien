@@ -23,4 +23,30 @@ Aufgabe2
 
 Aufgabe3  
 ##############
+Waren
+->Lieferanten, Liefertermine
+->Menge im Lager
+-->Mindestlagerbestand
+->Ablaufdaten
+->Kühlware
+->Preis
+->Kennnummer
+==>Liegen Daten als Rohdaten vor oder in Form von Dokumenten?
 
+->Mehrere Kassen? => Multiuserzugriff nötig?
+->Online Versand? => Multiuserzugriff nötig?
+
+
+Mitarbeiter
+->Gehalt
+->Position
+->Zugangsberechtigungen
+->Gearbeitete Stunden/Monat
+
+==>Wie werden Daten erfasst/Manipuliert? evtl teilw. kein Multiuserzugriff nötig?
+==>Wer hat hier Zugriff? Wer darf Personenbezogene Daten einsehen?
+
+Laden
+->Fläche
+->Mitarbeiter
+->Verortung

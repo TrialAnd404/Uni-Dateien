@@ -1,26 +1,27 @@
 import java.util.Iterator;
 
-public class ArrayIter<A> implements Iterable<A>{
+public class ArrayIter<A> implements Iterable<A> {
   A[] as;
-  ArrayIter(A[] as){
+
+  ArrayIter(A[] as) {
     this.as = as;
     new ArrayIterator(as)
-        .forEachRemaining(i -> System.out.println(i));
+            .forEachRemaining(i -> System.out.println(i));
   }
 
   public Iterator<A> iterator() {
-    return null;
+    return new ArrayIterator(as);
   }
 
-  private class ArrayIterator implements Iterator<A>{
+  private class ArrayIterator implements Iterator<A> {
     int length;
     int currentPos;
     A[] data;
 
-    ArrayIterator(A[] as){
+    ArrayIterator(A[] as) {
       this.data = as;
-      this.length=as.length;
-      this.currentPos=0;
+      this.length = as.length;
+      this.currentPos = 0;
     }
 
     @Override
