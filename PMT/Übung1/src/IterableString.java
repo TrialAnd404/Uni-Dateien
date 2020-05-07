@@ -7,7 +7,7 @@ public class IterableString implements Iterable<Character> {
     for (char c : new IterableString("Hello world!")) {
       System.out.println(c);
     }
-    System.out.println("actually garbage");
+   // System.out.println("actually garbage");
   }
 
   public IterableString(String str) {

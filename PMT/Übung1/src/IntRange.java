@@ -49,6 +49,7 @@ public class IntRange implements Iterable<Integer> {
 
     @Override
     public boolean hasNext() {
+  //    if(infinite) return true;
       if(step < 0) {
         if(from-to>=0){
           return true;

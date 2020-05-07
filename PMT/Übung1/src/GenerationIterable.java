@@ -39,7 +39,6 @@ public class GenerationIterable<A> implements Iterable<A> {
       System.out.println("f.apply: "+f.apply(a));
       a=f.apply(a);
 
-
       return result;
     }
   }

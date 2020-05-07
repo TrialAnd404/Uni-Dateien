@@ -22,7 +22,7 @@ public class StringSeperator implements Iterable<String> {
 
     public Rasierklingenliebe(String text) {
       this.text = text;
-      words = this.text.split("\\s");
+      words = this.text.split("\\s+");
       pos = 0;
     }
 
