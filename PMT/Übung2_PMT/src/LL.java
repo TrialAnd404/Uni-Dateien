@@ -29,19 +29,36 @@ public class LL<A>  {
   }
 
   boolean containsWith(Predicate<? super A> p) {
-    return false;
+    if (isEmpty())
+      return false;
+    if(p.test(hd))
+      return true;
+    return tl.containsWith(p);
   }
 
   boolean contains(A el) {
-    return false;
+    if (isEmpty())
+      return false;
+    if (hd==el)
+      return true;
+    return tl.contains(el);
   }
 
   boolean isPrefixOf(LL<A> that) {
-    return false;
+    if(that.isEmpty())
+      return true;
+    if (!(that.hd == this.hd))
+      return false;
+    return tl.isPrefixOf(that.tl);
   }
 
   LL<A> drop(int i){
-    return new LL<>();
+    if(i==0)
+      return new LL<A>(hd,tl);
+    else {
+      i=i-1;
+      return tl.drop(i);
+    }
   }
 
   LL<A> take(int i){
@@ -54,17 +71,24 @@ public class LL<A>  {
   }
 
   A last(){
-    return null;
+    if(tl.isEmpty())
+      return hd;
+    return tl.last();
   }
 
   LL<A> append(LL<A> that){
-    return new LL<>();
+    if(isEmpty()){
+      return that;
+    }
+    return new LL<A>(hd, tl.append(that));
   }
 
   void forEach(Consumer<? super A> con){
   }
 
   LL<A> filter(Predicate<? super A> p){
+    if(isEmpty())
+      return
     return new LL<>();
   }
 
