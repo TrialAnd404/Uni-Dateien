@@ -14,6 +14,7 @@ public class LL<A>  {
     this.hd = hd;
     this.tl = tl;
   }
+
   public LL() {
     this(null,null);
   }
@@ -39,38 +40,50 @@ public class LL<A>  {
   boolean contains(A el) {
     if (isEmpty())
       return false;
-    if (hd==el)
+    if (hd.equals(el))
       return true;
     return tl.contains(el);
   }
 
   boolean isPrefixOf(LL<A> that) {
-    if(that.isEmpty())
+    if(isEmpty())
       return true;
-    if (!(that.hd == this.hd))
+    if (!(that.hd.equals( this.hd)))
       return false;
     return tl.isPrefixOf(that.tl);
   }
 
-  LL<A> drop(int i){
-    if(i==0)
-      return new LL<A>(hd,tl);
+
+  LL<A> take(int i){
+    if(isEmpty()|| i==0)
+      return new LL<A>();
     else {
       i=i-1;
-      return tl.drop(i);
+      return new LL<A>(hd, tl.take(i));
     }
   }
 
-  LL<A> take(int i){
-    return new LL<>();
+  LL<A> drop(int i){
+    if(isEmpty())
+      return new LL<A>();
+    if(i==0)
+      return this;
+    else
+      return tl.drop(--i);
   }
 
-
   LL<A> sublist(int from, int length){
-    return new LL<>();
+    if(isEmpty())
+      return new LL<A>();
+    LL<A> result = this;
+    result = result.drop(from);
+    result = result.take(length);
+    return result;
   }
 
   A last(){
+    if(isEmpty())
+      return null;
     if(tl.isEmpty())
       return hd;
     return tl.last();
@@ -78,22 +91,30 @@ public class LL<A>  {
 
   LL<A> append(LL<A> that){
     if(isEmpty()){
-      return that;
+      return new LL<A>(that.hd, that.tl);
     }
     return new LL<A>(hd, tl.append(that));
   }
 
   void forEach(Consumer<? super A> con){
+    if (isEmpty())
+      return;
+    con.accept(hd);
+    tl.forEach(con);
   }
 
   LL<A> filter(Predicate<? super A> p){
     if(isEmpty())
-      return
-    return new LL<>();
+      return new LL<A>();
+    if(p.test(hd))
+      return new LL<A>(hd, tl.filter(p));
+    else return (tl.filter(p));
   }
 
   <B> LL<B> map(Function<? super A, ? extends B> f){
-    return new LL<B>();
+    if(isEmpty())
+      return new LL<B>();
+    return new LL<B>(f.apply(hd), tl.map(f));
   }
 
   LL<A> reverse(){
