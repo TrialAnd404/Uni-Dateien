@@ -35,26 +35,18 @@ public class AL<E> implements Iterable<E> {
 
   @Override
   public Iterator<E> iterator() {
-    return new MyIterator(store, size);
-  }
+    return new Iterator<E>(){
+      int c=0;
 
-  public class MyIterator implements Iterator<E>{
-    E[] store;
-    int size;
+      @Override
+      public boolean hasNext() {
+        return c < size;
+      }
 
-    public MyIterator(E[] store, int size){
-      this.store=store;
-      this.size=size;
-    }
-
-    @Override
-    public boolean hasNext() {
-      return false;
-    }
-
-    @Override
-    public E next() {
-      return null;
-    }
+      @Override
+      public E next() {
+        return get(c++);
+      }
+    };
   }
 }

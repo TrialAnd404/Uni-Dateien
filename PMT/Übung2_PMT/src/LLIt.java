@@ -8,7 +8,7 @@ public class LLIt<A> implements Iterable<A> {
     return hd == null && tl == null;
   }
 
-  public LL(A hd, LL<A> tl) {
+  public LLIt(A hd, LLIt<A> tl) {
     this.hd = hd;
     this.tl = tl;
   }
@@ -54,6 +54,21 @@ public class LLIt<A> implements Iterable<A> {
 
   @Override
   public Iterator<A> iterator() {
-    return null;
+    return new Iterator<A>(){
+
+      LL<A> tmp = new LL<A>(hd, tl);
+
+      @Override
+      public boolean hasNext() {
+        return isEmpty();
+      }
+
+      @Override
+      public A next() {
+        A result = tmp.hd;
+        tmp=tmp.tl;
+        return result;
+      }
+    };
   }
 }
