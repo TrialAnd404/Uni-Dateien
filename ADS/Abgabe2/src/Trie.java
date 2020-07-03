@@ -2,6 +2,13 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+
+
+
+
+
+
+
 public class Trie {
 
   static class TrieNode {
@@ -14,6 +21,7 @@ public class Trie {
     public TrieNode(char c) {
       value = c;
       myTree = new SearchTree();
+      maxNode = this;
     }
 
     public void add(char c, int count) {
@@ -33,18 +41,13 @@ public class Trie {
   }
 
   public static class SearchTree {
-    Node root;
-
-    class Node {
+    static class Node {
 
       Node left;
       Node right;
       char key;
       long count;
       TrieNode myTrieNode;
-
-      public Node() {
-      }
 
       // Node konstruktor
       public Node(char c, int count) {
@@ -57,6 +60,8 @@ public class Trie {
         count += additionalCount;
       }
     }
+
+    Node root;
 
     public SearchTree() {
       root = null;
@@ -107,7 +112,7 @@ public class Trie {
       // FIXME
       if (root == null)
         //root ist NULL, return -1
-        return -1;
+        return 0L;
 
       //Setup: tmpNode auf Root aufsetzen
       Node tmp = root;
@@ -117,7 +122,7 @@ public class Trie {
           //char gefunden, return tmp.count
           return tmp.count;
 
-        if (tmp.key < key) {
+        if (key < tmp.key) {
           //gesuchter key ist kleiner als key von tmp
           //--> key muss links von tmp sein,
           // tmp auf linkes kind von tmp weiterschalten
@@ -161,8 +166,6 @@ public class Trie {
     }
   }
 
-
-
   // Trie-Klasse
 
   TrieNode root;
@@ -193,19 +196,28 @@ public class Trie {
     //tempNode auf root, damit wir durch den Trie iterieren können
     char[] prefixChars = prefix.toCharArray();
     TrieNode tmp = root;
+    String result="";
+    if(tmp==null)
+      return null;
 
     //durch chars iterieren
     for (char c : prefixChars) {
+      /*
       if (tmp.get(c) == null) {
         //wir sind auf NULL getroffen
         // --> prefix existiert nicht (oder nicht komplett)
         return null;
-      }
+      }*/
       //wir gehen zum nächsten TrieNode mit dem entsprechenden char
       tmp = tmp.get(c);
+      if (tmp == null) {
+        //wir sind auf NULL getroffen
+        // --> prefix existiert nicht (oder nicht komplett)
+        return null;
+      }
     }
     //result wird vorbereitet, resultstrinng beginnt immer mit dem prefix
-    String result = prefix;
+    result = prefix;
     //iterieren über rest des Tries bis wir * finden
     //[[ * markiert wortende ]]
     while (tmp.maxNode.value != '*') {

@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86bbc3d2-da3b-48a0-94d5-7b87187ac996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/Abgabe1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/src/Potions/Potions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Abgabe1/src/Potions/PotionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung2/Übung2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung7/src/BracketChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung7/Übung7.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/BinTree.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ADS/Übung8/BinTree/src/BinTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/src/LL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/src/Li.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung4_2/Übung4_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung5/src/Tree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Übung5/Übung5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LLIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LLIt.java" afterDir="false" />
-    </list>
+    <list default="true" id="86bbc3d2-da3b-48a0-94d5-7b87187ac996" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ADS/Abgabe2" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,6 +35,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1015" y="312" width="424" height="496" key="FileChooserDialogImpl" timestamp="1593685920588">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="1015" y="312" width="424" height="496" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.1500.1000@72.27.1848.1053" timestamp="1593685920588" />
     <state x="75" y="27" width="1380" height="808" key="new project wizard" timestamp="1590053943941">
       <screen x="72" y="27" width="1428" height="973" />
     </state>
